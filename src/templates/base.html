@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jules Verne Times</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #002395;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            background-color: #d71a28;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .article {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+        .article h2 {
+            color: #002395;
+        }
+        .article p {
+            color: #333;
+        }
+        .read-more {
+            color: #d71a28;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .author {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #002395;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>Jules Verne Times</header>
+    <nav>
+        <a href="/articles/all/">Actualités</a>
+        
+        {% for category in categories %}
+        <a href="/articles/of_category/{{category.pk}}/">{{ category.title }}</a>
+        {% endfor %}
+    </nav>
+    {% block content %}
+    
+    {% endblock %}
+    <footer>
+        Journal en ligne de Lycée français international Jules Verne de Riga
+    </footer>
+</body>
+</html>
