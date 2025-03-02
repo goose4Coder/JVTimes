@@ -17,6 +17,7 @@ class Article(models.Model):
     creation_date = models.DateTimeField(auto_now=True, verbose_name="creation_date")
     content = CKEditor5Field('Content', config_name='default')
     category = models.ForeignKey(Category, on_delete=models.PROTECT, null=True)
+    public = models.BooleanField(verbose_name="Availible to public", default=True)
     def __str__(self):
         return self.title
     @property
