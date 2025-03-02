@@ -3,6 +3,7 @@ from django.views.generic import ListView,DetailView
 from . import models
 
 class ArticleListView(ListView):
+    paginate_by = 4
     model = models.Article
     queryset = models.Article.objects.order_by("-creation_date")
     context_object_name = "articles"
@@ -15,6 +16,7 @@ class ArticleListView(ListView):
 class ArticleByCategoryListView(ListView):
     model = models.Article
     queryset = models.Article.objects.order_by("-creation_date")
+    paginate_by = 4
     context_object_name = "articles"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
