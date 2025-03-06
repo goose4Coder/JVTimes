@@ -1,0 +1,7 @@
+env
+src/db.sqlite3
+env.bat
+*.pyc
+__pycache__
+test.html
+.gitignore
