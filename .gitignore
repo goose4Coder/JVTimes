@@ -9,6 +9,7 @@ src/static
 media
 test.html
 .env
+.env.prod
 # Backup files # 
 *.bak
 
