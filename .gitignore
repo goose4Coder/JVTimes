@@ -4,8 +4,11 @@
 *.pyc
 __pycache__
 src/db.sqlite3
+src/media
+src/static
 media
-
+test.html
+.env
 # Backup files # 
 *.bak
 

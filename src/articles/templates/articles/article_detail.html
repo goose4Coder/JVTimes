@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="article">
+            <h1>{{ object.title }}</h1>
+            <p class="author">Par {{ object.author_name }}</p>
+            {{ object.content |safe}}
+        </div>
+    </div>
+{% endblock %}

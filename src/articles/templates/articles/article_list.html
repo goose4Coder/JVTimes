@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if page_obj.has_previous %}
+        <a class="pagination" href="/articles/all/?page={{ page_obj.previous_page_number }}"> < Arriere</a>
+    {% endif %}
+    <div class="container">
+        {% for article in object_list %}
+        <div class="article">
+            <h2>{{ article.title }}</h2>
+            <p class="author">Par {{ article.author_name }}</p>
+            <p>{{ article.description }}</p>
+
+            <a class="read-more" href="/articles/read/{{ article.pk }}/">Read more</a>
+        </div>
+        {% endfor %}
+        
+    </div>
+    
+    {% if page_obj.has_next %}
+        <a class="pagination" href="/articles/all/?page={{ page_obj.next_page_number }}">Suivant ></a>
+    {% endif %}
+        
+{% endblock %}
