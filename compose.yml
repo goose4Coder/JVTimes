@@ -16,7 +16,7 @@ services:
     build: .
     image: django_docker_container_normal
     ports:
-      - "8000:8000"
+      - "80:80"
     volumes:
       - static_volume:/app/src/static
       - media_volume:/app/src/media
