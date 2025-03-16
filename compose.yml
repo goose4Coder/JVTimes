@@ -10,13 +10,13 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
-      - .env.prod
+      - .env
 
   django-web:
     build: .
     image: django_docker_container_normal
     ports:
-      - "8000:8000"
+      - "80:80"
     volumes:
       - static_volume:/app/src/static
       - media_volume:/app/src/media
@@ -30,12 +30,11 @@ services:
       DATABASE_ENGINE: ${DATABASE_ENGINE}
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
-
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_PORT: ${DATABASE_PORT}
     env_file:
-      - .env.prod
+      - .env
 
   frontend-proxy:
     image: nginx:latest
