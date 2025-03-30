@@ -96,6 +96,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CKEDITOR_5_CONFIGS = {
     'default': {
+        'height': '100%',
+        'width': '100%',
         'blockToolbar': [
             'paragraph', 'heading1', 'heading2', 'heading3',
             '|',
