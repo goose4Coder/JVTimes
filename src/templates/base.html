@@ -10,29 +10,29 @@
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #FDFBEE;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            color: #222;
+            color: #015551;
         }
         header {
-            background: linear-gradient(to right, #002395, #0050ef);
-            color: white;
+            background: linear-gradient(to right, #015551, #57B4BA);
+            color: #FDFBEE;
             padding: 30px 20px;
             text-align: center;
             font-size: 36px;
             font-weight: bold;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        nnav {
-            background-color: #d71a28;
+        nav {
+            background-color: #FE4F2D;
             padding: 15px;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         nav a {
-            color: white;
+            color: #FDFBEE;
             text-decoration: none;
             padding: 12px 20px;
             font-weight: bold;
@@ -49,11 +49,10 @@
             padding: 20px;
             flex: 1;
         }
-
         .article {
             display: flex;
             flex-direction: row;
-            background-color: #ffffff;
+            background-color: #FDFBEE;
             margin-bottom: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -69,36 +68,49 @@
             flex: 1;
         }
         .article h2 {
-            color: #002395;
+            color: #015551;
             margin-top: 0;
         }
         .article p {
-            color: #333;
+            color: #015551;
         }
         .read-more {
             display: inline-block;
             margin-top: 10px;
-            color: #d71a28;
+            color: #FE4F2D;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
         .read-more:hover {
-            color: #a1001b;
+            color: #FE4F2D;
         }
         footer {
-            background-color: #002395;
-            color: white;
+            background-color: #57B4BA;
+            color: #FDFBEE;
             text-align: center;
             padding: 15px;
             margin-top: auto;
+        }
+        .article-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .pagination{
+            color: black;
+            text-align: center;
+            padding: 10px;
         }
 
         img {
             max-width: 100% !important;
             height: auto !important;
         }
-
+        .author{
+            font-weight: bold;
+        }
         
     </style>
     <link rel="stylesheet" href="{% static 'django_ckeditor_5/dist/styles.css' %}" type="text/css">
