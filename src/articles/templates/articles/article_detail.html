@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container">
-        <div class="article ck-content">
+    <div class="article-container">
+        <div class="ck-content">
             <h1>{{ object.title }}</h1>
-            <p class="author">Par {{ object.author_name }}</p>
+            <h2 class="author">Par {{ object.author_name }}</h2>
             {{ object.content |safe}}
         </div>
     </div>

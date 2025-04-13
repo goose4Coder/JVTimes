@@ -6,11 +6,14 @@
     <div class="container">
         {% for article in object_list %}
         <div class="article">
-            <h2>{{ article.title }}</h2>
-            <p class="author">Par {{ article.author_name }}</p>
-            <p>{{ article.description }}</p>
-
-            <a class="read-more" href="/articles/read/{{ article.pk }}/">Read more</a>
+            <div class="article-content">
+                <h2>{{ article.title }}</h2>
+                <p class="author">Par {{ article.author_name }}</p>
+                <p>{{ article.description }}</p>
+    
+                <a class="read-more" href="/articles/read/{{ article.pk }}/">Read more</a>
+            </div>
+           
         </div>
         {% endfor %}
         
